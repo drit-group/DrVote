@@ -1,0 +1,52 @@
+@font-face {
+  font-family: iranSans;
+  src: url('../fonts/ttf/IRANSansWeb\(FaNum\).ttf');
+  src: url('../fonts/woff/IRANSansWeb\(FaNum\).woff');
+  src: url('../fonts/woff2/IRANSansWeb\(FaNum\).woff2');
+}
+@font-face {
+  font-family: iranSansBold;
+  src: url('../fonts/ttf/IRANSansWeb\(FaNum\)_Bold.ttf');
+  src: url('../fonts/woff2/IRANSansWeb\(FaNum\)_Bold.woff2');
+  src: url('../fonts/woff/IRANSansWeb\(FaNum\)_Bold.woff');
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: iranSansBold !important;
+}
+*{
+  font-family: iransans !important;
+}
+input[type=text]{
+  width: 100%;
+  padding: 10px 17px;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 3px 7px 0px #e93559d0;
+}
+input#inputId{
+  direction: ltr;
+}
+form #form-p1 , #form-p2{
+  max-width: 20rem;
+  margin: 40px auto;
+  padding: 0 30px;
+}
+form #form-p2{
+  font-size: 20px;
+}
+.bg-linear{
+  background: linear-gradient(40deg , #30333c , #484849);
+}
+::placeholder {
+  color: #e93558;
+}
+#inputId::placeholder {
+  text-align: end;
+}
+footer{
+  height: 50px;
+}
+footer img{
+  width: 30px;
+}
