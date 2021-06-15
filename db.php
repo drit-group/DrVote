@@ -24,10 +24,13 @@ function canVote($id_card)
         return FALSE;
     }
 }
-function setVoted($id)
+function setVoted($ids,$id_card)
 {
     $conn = connect();
-    $sql = "UPDATE `voters` SET `is_voted`='1' WHERE `id_card` = '$id_card'";
-    $a = mysqli_query($conn,$sql);
-    echo $a;
+    $sql = "UPDATE `voters` SET `is_voted`=1 WHERE `id_card` = $id_card";
+    mysqli_query($conn,$sql);
+    foreach ($ids as $id => $value) {
+        $sql = "UPDATE `candidate` SET `vote_count` = `vote_count` + 1 WHERE `id` = $id";
+        mysqli_query($conn,$sql);
+    }
 }

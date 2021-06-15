@@ -1,12 +1,10 @@
 <?php
 require "db.php";
 $candidates = getCandidate();
-// var_dump($candidates);
 if (isset($_POST['smb'])) {
     $form = $_POST;
     if (canVote($form['Id'])){
-        echo "ok";
-        setVoted($form['Id']);
+        setVoted($form['votes'],$form['Id']);
     }
 }
 ?>
@@ -32,7 +30,7 @@ if (isset($_POST['smb'])) {
                             </h3>
                             <?php foreach ($candidates as $candidate) { ?>
                                 <div class="py-1">
-                                    <input type="checkbox" name="<?php echo $candidate['id']; ?>" id="candidate1" class="inputOnclick">
+                                    <input type="checkbox" name="votes[<?php echo $candidate['id']; ?>]" id="candidate1" class="inputOnclick">
                                     <label for="candidate1" class="txt-white"><?php echo $candidate['name']; ?></label>
                                 </div>
                            <?php } ?>
