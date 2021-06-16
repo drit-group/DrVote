@@ -50,3 +50,10 @@ footer{
 footer img{
   width: 30px;
 }
+body{
+  background-image: url(../images/bg.png);
+  background-position: center;
+}
+.container{
+  opacity: 0.97;
+}
