@@ -29,8 +29,22 @@ function setVoted($ids,$id_card)
     $conn = connect();
     $sql = "UPDATE `voters` SET `is_voted`=1 WHERE `id_card` = $id_card";
     mysqli_query($conn,$sql);
-    foreach ($ids as $id => $value) {
-        $sql = "UPDATE `candidate` SET `vote_count` = `vote_count` + 1 WHERE `id` = $id";
-        mysqli_query($conn,$sql);
+    if (count($ids) <= 4) {
+        foreach ($ids as $id => $value) {
+            $sql = "UPDATE `candidate` SET `vote_count` = `vote_count` + 1 WHERE `id` = $id";
+            mysqli_query($conn,$sql);
+        }
+    }
+}
+function isAdmin($form){
+    $conn = connect();
+    $sql = "SELECT `password` FROM `admin` WHERE `username` = '$form[username]'";
+    // echo $sql;
+    $res = mysqli_query($conn,$sql);
+    $paas = mysqli_fetch_assoc($res);
+    if ($form['password']==$paas['password']){
+        return TRUE;
+    }else{
+        return FALSE;
     }
 }
