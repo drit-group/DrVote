@@ -39,7 +39,6 @@ function setVoted($ids,$id_card)
 function isAdmin($form){
     $conn = connect();
     $sql = "SELECT `password` FROM `admin` WHERE `username` = '$form[username]'";
-    // echo $sql;
     $res = mysqli_query($conn,$sql);
     $paas = mysqli_fetch_assoc($res);
     if ($form['password']==$paas['password']){

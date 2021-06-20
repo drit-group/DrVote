@@ -3,9 +3,9 @@ require "db.php";
 $candidates = getCandidate();
 if (isset($_POST['smb'])) {
     $form = $_POST;
-    // if (canVote($form['Id'])){
+    if (canVote($form['Id'])){
         setVoted($form['votes'],$form['Id']);
-    // }
+    }
 }
 ?>
 <!DOCTYPE html>
