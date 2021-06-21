@@ -3,8 +3,10 @@ require "db.php";
 $candidates = getCandidate();
 if (isset($_POST['smb'])) {
     $form = $_POST;
-    if (canVote($form['Id'])){
-        setVoted($form['votes'],$form['Id']);
+    if(is_numeric($_POST['Id'])){
+        if (canVote($form['Id'])){
+            setVoted($form['votes'],$form['Id']);
+        }
     }
 }
 ?>
