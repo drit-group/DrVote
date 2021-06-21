@@ -51,9 +51,11 @@ footer img{
   width: 30px;
 }
 body{
-  background-image: url(../images/bg.png);
+  background-image: url(https://tinypng.com/web/output/c1kaer76nee3bdk7zxtv36eqpbz8vce3/bg.png);
   background-position: center;
+  background-size:cover;
+  backdrop-filter: blur(5px);
 }
-.container{
+/* .container{
   opacity: 0.97;
-}
+} */
