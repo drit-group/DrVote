@@ -65,7 +65,7 @@ if (isset($_POST['smb'])) {
     <footer class="w-100 d-flex align-items-center justify-center bg-linear">
         <img src="dr logo.png" alt="dr.it">
         <span class="txt-white px-2">
-            di.it
+            dr.it
         </span>
         <span class="txt-white px-2">
             انجمن برنامه نویسان نوجوان
