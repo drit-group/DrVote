@@ -30,8 +30,8 @@ if (isset($_POST['smb'])) {
                             </h3>
                             <?php foreach ($candidates as $candidate) { ?>
                                 <div class="py-1">
-                                    <input type="checkbox" name="votes[<?php echo $candidate['id']; ?>]" id="candidate1" class="inputOnclick">
-                                    <label for="candidate1" class="txt-white"><?php echo $candidate['name']; ?></label>
+                                    <input type="checkbox" name="votes[<?php echo $candidate['id']; ?>]" id="<?php echo $candidate['id']; ?>" class="inputOnclick">
+                                    <label for="<?php echo $candidate['id']; ?>" class="txt-white"><?php echo $candidate['name']; ?></label>
                                 </div>
                            <?php } ?>
                             <!-- Up to n ... -->
